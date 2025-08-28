@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{
+    char op;
+    double a,b;
+    printf("enter a operator:");
+    scanf("%c",&op);
+    printf("enter two numbers:\n");
+    scanf("%lf %lf",&a,&b);
+    
+    switch(op)
+    {
+        case '+':
+        printf("answer=%2lf",a+b);
+        break;
+        case '-':
+        printf("answer=%2lf",a-b);
+        break;
+        case '*':
+        if(a==0&&b==0)
+        printf("undefined");
+        else
+             printf("answer=%2lf",a*b);
+        break;
+        case '/':
+        if(a==0&&b==0)
+        printf("undefined");
+        else
+             printf("answer=%2lf",a/b);
+        break;
+        default:
+        printf("invlid operator");
+        
+    }
+
+    return 0;
+}
